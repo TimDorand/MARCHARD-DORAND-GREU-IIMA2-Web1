@@ -123,6 +123,7 @@ hr {
 
 .form-horizontal textarea {
     resize: vertical;
+    height: 300px;
 }
 
 .form-horizontal label {

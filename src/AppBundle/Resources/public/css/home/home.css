@@ -46,6 +46,7 @@ hr {
     color: #FFFFFF;
     background-color: #0fc5ff;
     padding: 0 20px;
+    margin-left: 1px;
 }
 
 .new-button:hover {

@@ -14,10 +14,28 @@ class ArticleController extends Controller
 {
 
     /**
-     *
-     *
+     * @Route("/tag", name="article_tag")
      *
      */
+
+    public function showTagAction(Request $request)
+    {
+        $tag = $request->query->get('tag');
+
+        $em = $this->getDoctrine()->getManager();
+        $articleRepository = $em->getRepository('AppBundle:Article\Article');
+
+
+        $articlesTag = $articleRepository->findBy(array('tag' => $tag));
+
+//        var_dump($articlesTag);
+
+        return $this->render('AppBundle:Home:index.html.twig',[
+            'articles' => $articlesTag,
+        ]);
+
+   }
+
 
     /**
      * @Route("/{id}", requirements={"id" = "\d+"}, name="article_show")
@@ -42,17 +60,14 @@ class ArticleController extends Controller
      */
     public function listAction()
     {
-
         $em = $this->getDoctrine()->getManager();
         $articleRepository = $em->getRepository('AppBundle:Article\Article');
 
-        $author = "moi";
+        $articles = $articleRepository->findAll();
 
-        $articleRepository->findBy([
-            'author' => $author
+        return $this->render('AppBundle:Home:index.html.twig', [
+            'articles' => $articles,
         ]);
-
-        return new Response('List of Article');
     }
 
     /**

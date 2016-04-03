@@ -7,8 +7,32 @@
 
 {% block body %}
     {{ parent() }}
-    <div class="form">
-    {{ form(form) }}
-    </div>
+
+    <h2>Ajouter un article</h2>
+
+    <form class="form-horizontal">
+        <div class="articles-form-container">
+            {{ form_start(form) }}
+
+            <div class="form-group">
+                {{ form_errors(form.title) }}
+                {{ form_widget(form.title, {'attr' : {'placeholder' : 'Entrez le titre'}}) }}
+            </div>
+            <div class="form-group">
+                {{ form_errors(form.content) }}
+                {{ form_widget(form.content, {'attr' : {'placeholder' : 'Ecrivez votre article'}}) }}
+            </div>
+            <div class="form-group">
+                {{ form_errors(form.tag) }}
+                {{ form_widget(form.tag, {'attr' : {'placeholder' : 'Assignez un tag à votre article'}}) }}
+            </div>
+            <div class="form-group">
+                {{ form_errors(form.author) }}
+                {{ form_widget(form.author, {'attr' : {'placeholder' : 'Votre nom'}}) }}
+            </div>
+
+            {{ form_end(form) }}
+        </div>
+    </form>
 {% endblock %}
 

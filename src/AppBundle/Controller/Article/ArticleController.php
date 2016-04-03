@@ -12,6 +12,13 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class ArticleController extends Controller
 {
+
+    /**
+     *
+     *
+     *
+     */
+
     /**
      * @Route("/{id}", requirements={"id" = "\d+"}, name="article_show")
      *

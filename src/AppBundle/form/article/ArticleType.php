@@ -14,6 +14,8 @@ class ArticleType extends AbstractType
         $builder
             ->add('title')
             ->add('content')
+            ->add('author')
+            ->add('tag')
             ->add('createdAt')
             ->add('updatedAt')
             ->add('save', SubmitType::class)

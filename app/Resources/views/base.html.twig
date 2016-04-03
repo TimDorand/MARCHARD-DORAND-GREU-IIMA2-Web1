@@ -7,13 +7,16 @@
             <link rel="stylesheet" href="{{ asset('bundles/app/css/home/home.css') }}" type="text/css" media="all" />
         {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        {#<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">#}
     </head>
     <body>
         {% block body %}
+
             <header class="header">
                 <a href="{{ path('article_list') }}" class="logo"> Mon blog </a>
                 <a href="{{ path('article_new') }}" class="new-button"> New article </a>
             </header>
+
 
         {% endblock %}
         {% block javascripts %}{% endblock %}

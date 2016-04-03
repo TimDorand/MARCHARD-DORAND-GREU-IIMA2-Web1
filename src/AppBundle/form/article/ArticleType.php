@@ -16,8 +16,6 @@ class ArticleType extends AbstractType
             ->add('content')
             ->add('author')
             ->add('tag')
-            ->add('createdAt')
-            ->add('updatedAt')
             ->add('save', SubmitType::class)
         ;
     }

@@ -1,0 +1,16 @@
+<div class="container">
+    <h2> Articles </h2>
+    <hr/>
+    {% for article in articles %}
+        <div class="article-container">
+            <h3> {{ article.title  }}</h3>
+            {{ article.createdAt|date('m/d/Y H:i') }}
+            {{ article.author }}
+            <div class="boutons">
+                <a href="{{ path('article_list', {'tag' : article.tag}) }}" class="tag"> {{ article.tag }} </a>
+                <a href="{{ path('article_show', {'id' : article.id}) }}" class="btn-more"> Lire la suite </a>
+            </div>
+        </div>
+
+    {% endfor %}
+</div>

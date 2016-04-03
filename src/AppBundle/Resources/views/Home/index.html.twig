@@ -1,0 +1,14 @@
+{# src/AppBundle/Ressources/views/Home/index.html.twig #}
+{% extends "::base.html.twig" %}
+
+{% block title %}
+    {{ parent() ~ ' - Home' }}
+{% endblock %}
+
+{% block body %}
+    {{ parent() }}
+
+    {% include('AppBundle:Article/Partial:list.html.twig') %}
+{% endblock %}
+
+

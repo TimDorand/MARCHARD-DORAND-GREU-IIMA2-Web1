@@ -102,16 +102,79 @@ hr {
     display: inline-block;
 }
 
-.form {
-    width: 300px;
+
+
+.form-horizontal {
+    width: 500px;
     margin: 0 auto;
-    padding-top: 100px;
+    text-align: center;
 }
 
-.form input[type=text] {
-    width: 300px;
+.form-horizontal input,
+.form-horizontal textarea
+{
+    width: 500px;
+    height: 30px;
+    margin-bottom: 20px;
+    background-color: #eeeeee;
+    box-shadow: none;
+    border: 1px solid #333333;
 }
 
-.form textarea {
-    width: 300px;
+.form-horizontal textarea {
+    resize: vertical;
+}
+
+.form-horizontal label {
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+#article_createdAt select,
+#article_updatedAt select
+{
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: #333333;
+    border-radius: 0px;
+    border: 1px solid #333333;
+    color: #ffffff;
+    height: 30px;
+    width: auto;
+
+}
+
+#article_createdAt,
+#article_updatedAt {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#article_createdAt div {
+    display: inline-block;
+}
+
+#article_updatedAt div {
+    display: inline-block;
+}
+
+
+h2  {
+    text-align: center;
+}
+
+
+#article_save {
+    height: 30px;
+    width: 100px;
+    color: #ffffff;
+    background-color: #333333;
+    font-size: 16px;
+    margin: 0 auto;
+    cursor: pointer;
+    border: 1px solid #333333;
+}
+
+#article_save:hover {
+    background-color: #0fc5ff;
 }

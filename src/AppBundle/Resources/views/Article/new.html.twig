@@ -8,6 +8,7 @@
 {% block body %}
     {{ parent() }}
 
+    <div class="container">
     <h2>Ajouter un article</h2>
 
     <form class="form-horizontal">
@@ -34,5 +35,6 @@
             {{ form_end(form) }}
         </div>
     </form>
+    </div>
 {% endblock %}
 
